@@ -6,7 +6,7 @@
 2. Tools
 3. Prerequisites
 4. Tasks and answers
-5. 
+
 
 #### About
 
@@ -14,16 +14,16 @@ In my repository I would like to present the progress of my development in the f
 
 Programs and projects will be divided into the following modules:
 
-1. MODULE: 1 CONTROL INSTRUCTIONS AND LOOPS
-2. MODULE: 2 EXCEPTION HANDLING
-3. MODULE: 3 COMPOUND VARIABLES
-4. MODULE: 4 CURSORS
-5. MODULE: 5 PROCEDURES
-6. MODULE: 6 FUNCTIONS
-7. MODULE: 7 PL/SQL PACKAGE
-8. MODULE: 8 TRIGGER
-9. MODULE: 9 JOB SCHEDULER
-10. MODULE: 10 DYNAMIC SQL
+1. MODULE: CONTROL INSTRUCTIONS AND LOOPS
+2. MODULE: EXCEPTION HANDLING
+3. MODULE: COMPOUND VARIABLES
+4. MODULE: CURSORS
+5. MODULE: PROCEDURES
+6. MODULE: FUNCTIONS
+7. MODULE: PL/SQL PACKAGE
+8. MODULE: TRIGGER
+9. MODULE: JOB SCHEDULER
+10. MODULE: DYNAMIC SQL
 
 
 #### Tools 
@@ -61,7 +61,83 @@ To create new User: PL_SQL_Practice to need to download it from [here]
 Next step is to open SQL Developer and do the following steps:
 1. For create new user use the code below: 
 
-![Alt text](GitImages/FirstImages.PNG)
+![FirstImage](https://user-images.githubusercontent.com/125867556/221382674-ed3d9b75-4de6-4b6f-8dc6-c08e6d7bc5f6.png)
+
+2. Next step is to add New Connection and fill the necessary information:
+UserName: PL/SQL/Pratice
+Password: password123
+*Important to be connected to container XEPDB1
+
+![SecontImage](https://user-images.githubusercontent.com/125867556/221382841-9e3a4f9c-28ae-4db2-a02d-3cad1876be87.JPG)
+
+3. Last step is to copy attached sript: "PL/SQL_Practice" paste it in Worksheet of your created user and Run this sript. 
+
+![ThirdImage](https://user-images.githubusercontent.com/125867556/221383093-7a27805c-88a4-4803-ae66-4923a7be2c2c.JPG)
+
+4. After it you will have ready environment for run my code and test it.
+
+![FiveImaage](https://user-images.githubusercontent.com/125867556/221383230-ddcdbd53-fe32-4bd5-b54a-00c08ebdbce8.JPG)
+
+#### TASKS AND ANSERWS
+
+*TASKS AND ANSERWS OF EACH MODULES ARE ATTACHED INTO SEPARATELY FILES.
+
+For present how it works I present simple exemplary task:
+
+1. Write a function that should return BMI and take height and weight as parameters. Display the appropriate message on the console depending on the result:
+<16 "you need to eat more" >=16 and <25 "you need to eat more" >=25 "do some push-ups".
+
+2. Solution: 
+
+```sql
+CREATE OR REPLACE FUNCTION bmi_counter(v_growth IN NUMBER , v_weight IN NUMBER) RETURN NUMBER
+IS
+    v_bmi       NUMBER;
+    v_comm VARCHAR2(30);
+    ex_too_big EXCEPTION;
+    PRAGMA EXCEPTION_INIT(ex_too_big, -2000);
+BEGIN
+    IF v_growth > 225 THEN RAISE ex_too_big ;
+    END IF;
+    v_bmi := round(v_weight /(power((v_growth * 0.01), 2)), 2);
+    IF v_bmi < 16 THEN
+        v_comm := 'you need to eat more';
+    ELSIF
+        v_bmi >= 16
+        AND v_bmi < 25
+    THEN
+        v_comm := 'you need to eat more';
+    ELSIF v_bmi >= 25 THEN
+        v_comm := 'o some push-ups';
+    END IF;
+    dbms_output.put_line(v_comm);
+    RETURN v_bmi;
+    EXCEPTION 
+    WHEN ex_too_big THEN 
+    DBMS_OUTPUT.PUT_LINE('Podany wzrost jest nienaturalnie duży. Upewnij sie i podaj poprawny wzrost');
+END bmi_counter;
+/
+
+-- Program call
+DECLARE
+v_bmi NUMBER;
+BEGIN
+v_bmi := bmi_counter(180,80);
+DBMS_OUTPUT.PUT_LINE(v_bmi);
+END;
+
+```
 
 
-A
+## Contact
+
+If You have any problem please contact me. Any advices or guidance are welcome.
+
+Amadeusz RACZYŃKI
+
+LinkedIn: www.linkedin.com/in/amadeusz-raczyński-6a336b222
+
+
+
+
+
