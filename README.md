@@ -61,5 +61,7 @@ To create new User: PL_SQL_Practice to need to download it from [here]
 Next step is to open SQL Developer and do the following steps:
 1. For create new user use the code below: 
 
-![Alt text](GitImages/FirstImages.png)
+![Alt text](GitImages/FirstImages.PNG)
+
+
 A
