@@ -14,7 +14,7 @@ CREATE TABLE regions
     , region_name    VARCHAR2(25)   
     );
 
--- COUNTRIES table holds country information for customers and company locations. 
+--  COUNTRIES table holds country information for customers and company locations. 
 -- OE.CUSTOMERS table and HR.LOCATIONS have a foreign key to this table.
 CREATE TABLE countries   
     ( country_id      CHAR(2)   
