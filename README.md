@@ -10,7 +10,7 @@
 
 #### About
 
-In my repository I would like to present the progress of my development in the field of databases. I will particularly focus on Oracle implementation using the PL/SQL programming language. The tasks will be performed on the "PL_SQL_Practice" user schema which you download from my github.
+In my repository I would like to present the progress of my development in the field of databases. I will particularly focus on the Oracle implementation using the PL/SQL programming language. The tasks will be performed on the "PL_SQL_Practice" user schema which you download from my github.
 
 Programs and projects will be divided into the following modules:
 
@@ -30,8 +30,9 @@ Programs and projects will be divided into the following modules:
 
 * `PL/SQL`
 * `SQL`
-* `Data Modeler`
-* `SQL Developer`
+* `Data Modeler 21.2.0.183`
+* `SQL Developer Version 22.2.1.234`
+* `Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production`
 
 #### Prerequisites
 
@@ -45,36 +46,36 @@ Programs and projects will be divided into the following modules:
 
 ## Installing SQL Developer on Windows
 
- Here is good tutorial for install SQL DEVELOPER on Windows 10 x64 bit [here](https://www.youtube.com/watch?v=zliF8kXVmeE) but if You would have a problem [here](https://docs.oracle.com/en/database/oracle/sql-developer/22.2/rptug/sql-developer-concepts-usage.html#GUID-156BEBA3-2F9B-4CE0-8E91-728581FF46AB) is documentation on the subject. 
+ Here is good tutorial for install SQL DEVELOPER on Windows 10 x64 bit [here](https://www.youtube.com/watch?v=zliF8kXVmeE) but if You would have a problem [here](https://docs.oracle.com/en/database/oracle/sql-developer/22.2/rptug/sql-developer-concepts-usage.html#GUID-156BEBA3-2F9B-4CE0-8E91-728581FF46AB) is documentation on this subject. 
 
 ## Installing Oracle Database 21c on Windows 10/11 
 
-After installing SQL Developer, you need to install the Oracle database. In our case, it will be the latest version of Oracle Database 21C. Here i good tutorial for do it.  [here](https://www.youtube.com/watch?v=-h2NJmake20). 
+After installing SQL Developer, you need to install the Oracle database. In our case, it will be the latest version of Oracle Database 21C. Here is a good tutorial to do it.  [here](https://www.youtube.com/watch?v=-h2NJmake20). 
 
 ## Download Source Files
 
-To create new User: PL_SQL_Practice to need to download it from [here]
+To create new User: PL_SQL_Practice you need to download it from [here]
 
 
 ## Create New User using "PL_SQL_Practice" schema
 
 Next step is to open SQL Developer and do the following steps:
-1. For create new user use the code below: 
+1. To create new user use the code below: 
 
 ![FirstImage](https://user-images.githubusercontent.com/125867556/221382674-ed3d9b75-4de6-4b6f-8dc6-c08e6d7bc5f6.png)
 
-2. Next step is to add New Connection and fill the necessary information:
+2. Next step is  adding New Connection and fill the necessary information:
 UserName: PL/SQL/Pratice
 Password: password123
 *Important to be connected to container XEPDB1
 
 ![SecontImage](https://user-images.githubusercontent.com/125867556/221382841-9e3a4f9c-28ae-4db2-a02d-3cad1876be87.JPG)
 
-3. Last step is to copy attached sript: "PL/SQL_Practice" paste it in Worksheet of your created user and Run this sript. 
+3. Last step is to copy attached sript: "PL/SQL_Practice", paste it in Worksheet of your created user and Run this sript. 
 
 ![ThirdImage](https://user-images.githubusercontent.com/125867556/221383093-7a27805c-88a4-4803-ae66-4923a7be2c2c.JPG)
 
-4. After it you will have ready environment for run my code and test it.
+4. After it you will have ready environment to get my attached scripts and test it.
 
 ![FiveImaage](https://user-images.githubusercontent.com/125867556/221383230-ddcdbd53-fe32-4bd5-b54a-00c08ebdbce8.JPG)
 
@@ -82,7 +83,7 @@ Password: password123
 
 *TASKS AND ANSERWS OF EACH MODULES ARE ATTACHED INTO SEPARATELY FILES.
 
-For present how it works I present simple exemplary task:
+To present how it works I will show simple exemplary task:
 
 1. Write a function that should return BMI and take height and weight as parameters. Display the appropriate message on the console depending on the result:
 <16 "you need to eat more" >=16 and <25 "you need to eat more" >=25 "do some push-ups".
