@@ -20,7 +20,7 @@ Programs and projects will be divided into the following modules:
 4. MODULE: FUNCTIONS
 5. MODULE: PL/SQL PACKAGE
 6. MODULE: TRIGGERS
-7. MODULE: JOB SCHEDULER (not added yet)
+7. MODULE: JOB SCHEDULER 
 8. MODULE: DYNAMIC SQL (not added yet)
 
 
